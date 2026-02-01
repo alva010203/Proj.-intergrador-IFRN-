@@ -1,4 +1,7 @@
 # Proj.-intergrador-IFRN
+[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Google Drive API](https://img.shields.io/badge/API-Google%20Drive%20v3-green.svg)](https://developers.google.com/drive)
+[![Telegram Bot API](https://img.shields.io/badge/Bot-Telegram%20API-blue.svg)](https://core.telegram.org/bots)
 
 # Bot de Backup Automático do Google Drive via Telegram
 
@@ -32,19 +35,22 @@ O sistema permite:
 
 ---
 
-## 🤖 Comandos do Bot Telegram
-- `/start` → Inicia o bot e mostra os comandos disponíveis
-- `/backup_manual` → Executa um backup manual
-- `/forcar_backup` → Força a execução de um backup, mesmo que já exista
-- `/armazenamento` → Mostra o uso do Google Drive
-- `/status` → Verifica se há backup em execução
+## 🤖 Interface do Bot (Comandos)
+
+| Comando | Descrição |
+| :--- | :--- |
+| `/start` | Inicializa o bot e apresenta o menu de ajuda. |
+| `/armazenamento` | Exibe relatório de cota (Total, Usado, Livre) com barra de porcentagem. |
+| `/backup_manual` | Inicia o download se não houver backup recente. |
+| `/forcar_backup` | Sobrescreve backups existentes e inicia nova sincronia. |
+| `/status` | Verifica se o sistema está ocioso ou processando arquivos. |
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
-- **Python 3**
-- **Telegram Bot API**
-- **Google Drive API**
+- **Python 3.x**
+- **[Telegram Bot API](https://core.telegram.org/bots)**
+- **[Google Drive API v3](https://developers.google.com/drive/api)**
 - Bibliotecas:
   - `telebot`
   - `google-api-python-client`
@@ -55,3 +61,17 @@ O sistema permite:
 ---
 
 ## 📂 Estrutura do Projeto
+
+---
+
+## ⚙️ Configuração e Instalação
+
+### 1. Requisitos Prévios
+* Conta no [Google Cloud Console](https://console.cloud.google.com/). (corrigir se necessário)
+* Ativar a **Google Drive API**.
+* Download do arquivo `credentials.json` (OAuth 2.0).
+*  
+
+### 2. Dependências
+```bash
+pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib pyTelegramBotAPI
