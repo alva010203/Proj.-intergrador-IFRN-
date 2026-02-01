@@ -80,7 +80,6 @@ Proj.-intergrador-IFRN/
 - Conta no **Google Cloud Console** (corrigir se necessário)
 - Google Drive API ativada
 - Arquivo `credentials.json` (OAuth 2.0)
-- Token de acesso do Telegram Bot
 
 ### 2️⃣ Instalação das Dependências
 ```bash
