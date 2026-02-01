@@ -308,11 +308,11 @@ def backup_forcado(message):
         sucesso = pref_backup(service_local, origem="telegram", sobrescrever=True)
 
         if sucesso:
-            bot.send_message(message.chat.id, "✅ Backup manual FORÇADO concluído com sucesso!")
+            bot.send_message(message.chat.id, "Backup manual FORÇADO concluído com sucesso!")
         else:
             bot.send_message(
                 message.chat.id,
-                "⚠️ Backup já está em execução. Aguarde terminar para tentar novamente."
+                "Backup já está em execução. Aguarde terminar para tentar novamente."
             )
 
     threading.Thread(target=tarefa, daemon=True).start()
@@ -335,4 +335,3 @@ if __name__ == "__main__":
 
     threading.Thread(target=iniciar_bot, daemon=True).start()
     loop_continuo(limite_def=70, intervalo=30)
-
