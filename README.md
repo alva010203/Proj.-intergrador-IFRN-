@@ -13,7 +13,7 @@ O sistema permite:
 - Realizar **backup automático** do Google Drive ao atingir um limite de uso configurado
 - Executar **backup manual** por meio de comandos no Telegram
 - Exportar arquivos do Google Docs, Sheets e Slides para formatos compatíveis
-- Monitorar continuamente o **uso de armazenamento**
+- Monitoramento continuo do **uso de armazenamento**
 - Evitar a execução simultânea de múltiplos backups
 
 ---
