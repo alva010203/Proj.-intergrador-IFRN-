@@ -83,5 +83,6 @@ Proj.-intergrador-IFRN/
 
 ### 2️⃣ Instalação das Dependências
 ```bash
-pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib pyTelegramBotAPI telebot
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib telebot
+
 
