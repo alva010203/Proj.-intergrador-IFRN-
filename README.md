@@ -76,6 +76,9 @@ Proj.-intergrador-IFRN/
 
 ## ⚙️ Configuração e Instalação
 
+### Tutorial Api drive
+https://drive.google.com/file/d/1d1oZH9m1T1OWoNh59p_ERDu6903NpOnd/view?usp=sharing
+
 ### 1️⃣ Requisitos Prévios
 - Conta no **Google Cloud Console** (corrigir se necessário)
 - Google Drive API ativada
