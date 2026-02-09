@@ -80,7 +80,7 @@ Proj.-intergrador-IFRN/
 #### Entre nesse link para realizar o tutorial.
 https://console.cloud.google.com/
 #### Passo a Passo
-https://drive.google.com/file/d/1d1oZH9m1T1OWoNh59p_ERDu6903NpOnd/view?usp=sharing
+https://drive.google.com/file/d/1BKKPgaddbLdNPPgFha7YuYj7sOGoHUJY/view?usp=sharing
 
 ### 1️⃣ Requisitos Prévios
 - Conta no **Google Cloud Console** (corrigir se necessário)
