@@ -12,7 +12,7 @@ from googleapiclient.http import MediaIoBaseDownload, MediaIoBaseUpload
 from datetime import datetime
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
-TOKEN_TELEGRAM = "TOKEN_TELEGRAM"
+TOKEN_TELEGRAM = "8335790043:AAHW8u_qADPNxvjb2eOiTCj5gwhCTuHjMBw"
 CHATS_ID_TELEGRAM = set()
 bot = telebot.TeleBot(TOKEN_TELEGRAM)
 
@@ -221,7 +221,7 @@ def pref_backup(service, caminho_backup=None, origem="automatico", sobrescrever=
             if not caminho_backup:
                 print("[automatico] Backup recente já existe. Pulando.")
                 return False
-
+            
             for chat_id in CHATS_ID_TELEGRAM:
                 try:
                     bot.send_message(chat_id, "Iniciando backup automático!")
@@ -240,6 +240,11 @@ def pref_backup(service, caminho_backup=None, origem="automatico", sobrescrever=
         print(f"[{origem}] Iniciando backup em {caminho_backup}...")
         baixar_recursivo(service, "root", caminho_backup)
         print(f"[{origem}] Backup finalizado com sucesso.")
+        for chat_id in CHATS_ID_TELEGRAM:
+                try:
+                    bot.send_message(chat_id, "Backup finalizado com sucesso!")
+                except Exception as e:
+                    print(f"Falha ao enviar notificação para chat {chat_id}: {e}")
         return True
 
     finally:
@@ -269,7 +274,7 @@ def backup_manual(message):
         else:
             bot.send_message(
                 message.chat.id,
-                "Backup do dia já existe.\nUse /forcar_backup para sobrescrever."
+                "Já existe um backup recente.\nUse /forcar_backup para sobrescrevê-lo e/ou criar um novo."
             )
 
     threading.Thread(target=tarefa, daemon=True).start()
@@ -334,4 +339,6 @@ if __name__ == "__main__":
         bot.infinity_polling()
 
     threading.Thread(target=iniciar_bot, daemon=True).start()
-    loop_continuo(limite_def=70, intervalo=30)
+    limite = int(input("Insira a porcentagem de limite: "))
+    loop_continuo(limite_def=limite, intervalo=30)
+
