@@ -12,7 +12,7 @@ from googleapiclient.http import MediaIoBaseDownload, MediaIoBaseUpload
 from datetime import datetime
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
-TOKEN_TELEGRAM = "8335790043:AAHW8u_qADPNxvjb2eOiTCj5gwhCTuHjMBw"
+TOKEN_TELEGRAM = "TOKEN_TELEGRAM"
 CHATS_ID_TELEGRAM = set()
 bot = telebot.TeleBot(TOKEN_TELEGRAM)
 
